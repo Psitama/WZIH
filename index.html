@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Was zocke ich heute?</title>
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      margin-top: 100px;
+    }
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+    }
+    #result {
+      margin-top: 40px;
+      font-size: 28px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Was zocke ich heute?</h1>
+
+  <button onclick="pickGame()">Zufallsspiel</button>
+
+  <div id="result"></div>
+
+  <script>
+    const games = [
+      "Lies of P",
+      "Nine Sols",
+      "Nioh",
+      "Elden Ring",
+      "Dark Souls 3",
+      "Hollow Knight"
+    ];
+
+    function pickGame() {
+      const random = Math.floor(Math.random() * games.length);
+      document.getElementById("result").innerText = games[random];
+    }
+  </script>
+
+</body>
+</html>

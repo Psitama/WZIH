@@ -3,30 +3,69 @@
 <head>
   <meta charset="UTF-8">
   <title>Was zocke ich heute?</title>
+
   <style>
     body {
-      font-family: Arial;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      background: radial-gradient(circle at top, #1b1b2f, #0d0d14);
+      color: white;
+    }
+
+    .container {
       text-align: center;
-      margin-top: 100px;
+      padding: 40px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.05);
+      box-shadow: 0 0 25px rgba(0,0,0,0.6);
+      backdrop-filter: blur(10px);
+      width: 320px;
     }
+
+    h1 {
+      margin-bottom: 20px;
+      font-size: 22px;
+      letter-spacing: 1px;
+    }
+
     button {
-      padding: 15px 30px;
-      font-size: 18px;
+      padding: 12px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      background: linear-gradient(90deg, #6a00ff, #00d4ff);
+      color: white;
+      transition: 0.2s;
+      width: 100%;
     }
+
+    button:hover {
+      transform: scale(1.05);
+    }
+
     #result {
-      margin-top: 40px;
-      font-size: 28px;
+      margin-top: 25px;
+      font-size: 20px;
       font-weight: bold;
+      min-height: 30px;
     }
   </style>
 </head>
+
 <body>
 
-  <h1>Was zocke ich heute?</h1>
+  <div class="container">
+    <h1>🎮 Was zocke ich heute?</h1>
 
-  <button onclick="pickGame()">Zufallsspiel</button>
+    <button onclick="pickGame()">Zufallsspiel</button>
 
-  <div id="result"></div>
+    <div id="result"></div>
+  </div>
 
   <script>
     const games = [
